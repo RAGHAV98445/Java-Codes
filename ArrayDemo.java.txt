@@ -1,0 +1,28 @@
+
+public class ArrayDemo
+{
+	public static void main(String[] args) {
+	    
+		int array[]={1,2,3,4,5};
+		System.out.println(array[0]+" "+array[1]+" "+array[2]+" "+array[3]+" "+array[4]);
+		
+		
+		
+		int array1[]=new int[5];
+		array1[0]=1;
+		array1[1]=2;
+		array1[2]=3;
+		array1[3]=4;
+		array1[4]=5;
+	System.out.println(array1[0]+" "+array1[1]+" "+array1[2]+" "+array1[3]+" "+array1[4]);
+		
+		
+		String str[]=new String[2];
+		str[0]="cognizant";
+		str[1]="has";
+		
+		System.out.println(str[0]+" "+str[1]);
+		
+		
+	}
+}
