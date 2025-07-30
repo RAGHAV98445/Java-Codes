@@ -1,0 +1,236 @@
+#Logging
+
+ 
+Logging is the practise of recording events,actions and messages from appplications or systems info files,databases,or monitoring tools.
+
+
+Importance of Logging:-
+
+-troubleshooting-> help diagnose errors or failures quickly.
+-Understanding Behaviour->  Tracks how users and systems behave over time.
+-Auditing and Compilance -> Keeps how users and systems behave over time.
+-Performance Monitoring-> Identifies bottlenecks or abnormal patterns.
+-Reproductivity-> Lets you recreate steps that lead to an issue.
+-Alerts & Notifications-> Enablesreal-time alerts when problems occur.
+
+Common Login Use Case:-
+
+Application Deugging->Log function entries ,variable values and logic flow.
+Security-> Audits Record Logins
+System Monitoring
+User Activity Logs
+Transaction logs
+Error Tracking
+
+
+Logging Levels Explained:-
+Logging levels help categorize the importance and urgency of log message.
+
+DEBUG                           detailed info for debugging         variable values,flow tracing
+INFO                            General App progress                Startup complete,user login
+WARNING                         something unexpected,not critical   Deprecated API,used,retrying connection
+ERROR                           An 
+CRITICAL / FATAL
+
+
+
+//Log4j:-It is one library called slfj4
+
+it is used to output log and 
+
+
+
+
+log levels,INFO,DEBUG
+loggers , function
+.appender, layout level),Level,TRACE
+
+//we have to make its object and use its methods  //done in intellij
+
+//Advance Unix:-
+
+
+//File Management
+
+Some commands:-
+
+ls
+ls -l
+ls -a
+ls-la or ls-al
+ls-lh
+ls-lt
+ls-ltr
+ls-R
+
+
+Meta Characters in Unix:-
+
+that have meaning beyound their literal value.
+They are used for pattern 
+
+1. touch file_name -> this file creates new empty file,if file already exist it updates the timestamp
+
+2. echo -> can file with text
+echo "Hello">>file.txt
+append kar denge
+
+3. printf > file.txt -->to append in file
+4.cat for writing multiple lines
+5.nano,vi,vim -> open text editors for file
+6.cp,nv we can create new file (but in nv we rename that file)
+
+
+
+#Directory Management:-
+
+#File Permission/Access Modes
+                                                               
+             
+
+1.Permission Indicators:-
+
+
+Position        Meaning Who it applies to 
+-rwx              read,write,execute(enetr)(for owner or user)
+ r-x                 (it is for group)  
+ r--                 (for others)
+
+
+ ## Changing Permissions:-
+
+u->user
+g->Group
+o:others
+a:All(u,g and o)
+
+Permisssion Types:-
+
+r:Read
+w:write
+x:Execute
+
+Operators:-
++:Add Permission
+-:Remove Permission
+=: Set permission exactly
+
+
+chmod u+w filename #Adds write permission for the owner
+chmod g-x directory # Removes execute permission for the group
+chmod a=rwx file.sh # Setsread,write,and execute permission
+
+
+##Absolute(Octal Permissions)
+
+Each Permission Number:-
+
+Permission      Value
+r                4
+w                2
+x                1
+
+
+so,rwx=4+2+1=7
+
+
+#Basic Utilities:-
+
+1.Printing Files:-
+
+You can print text files using:-
+
+a. Pr[options] filename
+
+
+Useful options:-
+
+-l     set page length
+-h     set custom header
+-n     add line numbers
+-d      double space output
+
+Eaxmple:-
+pr -h "Monthly Report
+
+2. lp and lpr- Print Files
+
+lpfile.txt    Printing using System V style
+lprfile.txt   Print using BSDstyle(BerkeleySoftwareDistribution)
+
+
+Options:-
+Option                 Description
+-d printer name        Specify the printer
+-n number
+
+
+
+lpstat and lpq -CheckPrintQueue
+
+lpstat    Check status of printer and jobs
+lpstat-p  List available printers
+lpstat-o
+lpq
+
+
+Example:-
+
+lpstat-o
+lpq-P hpprinter
+
+
+5. cancel and lprm-Cancel print jobs
+cancel job_id         Cancel a print job(System)
+
+
+
+6. sending an email
+
+echo "This is the body" |mail-S"Subject"r@gmail.com
+
+
+Attach a file:-
+mail-s "Report" -afile
+
+
+7. Pipe and filter
+
+
+grepCommand -SearchTextinFiles
+
+Syntax:-
+grep[options]"pattern"filename
+
+Common use case:-
+
+grep"error"logfile.txt    Find lines containing"error"
+
+
+8. sortCommand -SortLinesinTextFiles:-
+
+Basic Syntax:-
+
+
+
+9.pgCommand -Page byPage viewing:-
+
+pg filename
+
+
+Shows one page at a time
+
+Use:-
+Enter 
+
+
+
+
+
+
+
+
+
+
+
+
