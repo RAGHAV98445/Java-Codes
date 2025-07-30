@@ -1,0 +1,260 @@
+## Till ES-5 constructor and function is same
+## After that all is changed
+
+
+##Making class with new Object:-
+
+var employee1=new Object();
+      employee1.name = "Raghu";
+      employee1.age = 22;
+      employee1.salary = "22,500";
+
+
+document.write(employee1.name+" "+employee1.age+" "+employee1.salary);
+
+
+
+
+##Making class with constructor:-
+
+ function Empinfo(name,salary,age){
+         this.salary=salary;
+         this.name=name;
+        this.age = age;
+      }
+var employee2 = new Empinfo("Raghav", 50000, 25);
+
+document.write(employee2.name+" "+employee2.age+" "+employee2.salary);
+
+
+#ES 3:-
+
+We got eguals=> ==   and strictly equals to=> === in this version
+
+
+
+ Regular Expression:-
+
+Literal Expression:-
+
+var str="This is the good book";
+      var patt=/good/i;
+      var result=str.match(patt);
+
+      document.write(result);
+
+
+
+Constructor Expression:- that are made by regularexpression:-
+
+  var str="Hello studyTonight";
+         var r=new RegExp("Hello");
+         document.write(r.test(str));
+
+
+
+#ES 4:- never realeased due to internal conflict
+
+#ES 5:-
+
+"use strict",when this feature turned on we getReference Error.
+Use control+shift+j to check error
+
+
+x=5
+console.log(x);
+
+ArrayFunctions:-
+
+a. forEach() loop :-
+var a=[1,2,3,4,5];
+
+      a.forEach(function(element){
+         console.log(element);
+      });
+
+b. .indexOf()
+c.leatIndexOf()
+
+
+
+
+########JSON:-########
+
+The ability to parse and stringify Javascript Object Notation(JSON), it is an object defined in javascript.
+It is used to transmit some sort of structured data to network used as API.
+
+When we transmit data over a networkit has to be of string. 
+When 
+
+
+var obj={
+author:"King",
+title: "What is Life",
+published:true
+}
+
+console.log(JSON.stringify(obj));
+console.log(JSON.parse(JSON.stringify(obj)));
+console.log(obj);
+
+
+
+
+Accessors in Javascript:-
+
+const student={
+         firstName:'Ram',
+         lastName: 'Singh',
+
+         get name(){
+            return this.firstName + ' ' + this.lastName;
+         },
+
+          set name(name){
+             this.lastname='Sharma';
+         }
+      };
+      
+
+
+
+Big Arrow Funcction:-
+
+var sum= (num1,num2)=> num1+num2;
+
+
+
+Class declaration in Javascript after ES5 in ES6:-
+
+class College{
+    
+      constructor(name,city){
+         this.name=name;
+         this.city=city;
+      }
+
+      Approved(){
+         return "Yes Approved";
+      }
+
+    }
+
+let college=new College("xyz","abc");
+      document.write(college.name);
+
+
+
+//Static Method in Javascript
+class Myclass{
+      static work(){
+         return "working";
+      }
+
+      static name="Raghav";
+    }
+
+    console.log(Myclass.work());
+    console.log(Myclass.name);
+      
+
+
+// Some errors 
+var a=40;
+var a=80;   // in case of var re-initialization not give error
+
+    let ab=20;
+    let ab=30;
+      // it gives error
+
+
+
+// if use for complete program use const 
+// and always write program with let it is more accurate
+
+
+
+##Rest Parameter(-) (collect inside array)
+
+-It is same like java varargs.
+- When we pass it , it is internally as an array.
+
+function restParameterDemo(...args){
+  return args[1];
+}
+
+document.write(restParameterDemo(1,2,3,4,5));
+
+
+##Spread Parameter it is used to spread an array, and object lierals.
+
+
+
+## Template Literal:-
+
+//using of baktics:-
+let name='John', secondName='Ram';
+
+let greetings='Hi $(name)'+ ','+'Hi $(secondName)';
+
+
+
+
+## Communication in Enterprise Level Application:-
+
+
+A. synchronous communication - immediate response for your request
+
+
+
+client ---- request-->server
+<----------response-----
+
+
+
+B. async communication:-
+
+Fire and Forgot:-
+
+Example:- bank==send====>sms
+
+Fire Wait Callback:-
+
+request---->
+
+                  //this is the function that sender write for how long this function active and wait for response(after 2 days)
+
+<----response
+
+
+
+// it can be implemented using KAFKA //
+
+
+async function in js:-
+
+function resolveAfter2Seconds() {
+   return new Promise(resolve => {
+      setTimeout(() => {
+         resolve("resolved");
+      }, 8000); // This waits for 8 seconds, not 2
+   });
+}
+
+async function asyncCall() {
+   console.log("calling");
+   const result = await resolveAfter2Seconds(); // Waits for 8 seconds
+   console.log(result); // Logs "resolved"
+}
+
+asyncCall();
+
+
+
+
+
+
+
+
+
+
